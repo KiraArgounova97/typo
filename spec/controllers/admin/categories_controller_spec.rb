@@ -35,8 +35,6 @@ describe Admin::CategoriesController do
       post :edit, :category => {:name => "Foobar", :keywords => "Lorem Ipsum", :permalink => "Link", :description => "Describe"}
       assert_response :redirect, :action => "index"
       expect(assigns(:category)).not_to be_nil #should_not be_nil? 
-      expect(flash[:notice].to eq("Category was successfully saved."))
-      # assigns(:categories).should_not be_nil
     end
   end
 # ===========================================================
