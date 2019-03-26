@@ -17,7 +17,7 @@ describe Admin::CategoriesController do
     assert_response :redirect, :action => 'index'
   end
 
-=begin
+
   # Add from here--create categories =====================
   describe "test_create" do 
     before(:each) do 
@@ -40,7 +40,7 @@ describe Admin::CategoriesController do
     end
   end
 # ===========================================================
-=end
+
 
   describe "test_edit" do
     before(:each) do
