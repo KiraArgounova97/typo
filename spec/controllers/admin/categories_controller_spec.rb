@@ -34,8 +34,13 @@ describe Admin::CategoriesController do
     it 'should create a new category' do 
       post :edit, :category => {:name => "Foobar", :keywords => "Lorem Ipsum", :permalink => "Link", :description => "Describe"}
       assert_response :redirect, :action => "index"
-      expect(assigns(:category)).not_to be_nil #should_not be_nil? 
+      expect(assigns(:category)).should_not be_nil #should_not be_nil? 
+      # warning needed?
     end
+    
+    #it 'should modify the new category'
+    #end
+    
   end
 # ===========================================================
 
